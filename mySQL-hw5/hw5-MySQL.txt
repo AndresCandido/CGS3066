@@ -1,0 +1,91 @@
+# Assignment 5 - Andres Candido
+
+# Create a database called MyDB (5 points).
+CREATE DATABASE MyDB;
+
+# Create a table Students with the following fields (15 points).
+CREATE TABLE Students (
+    StudentID VARCHAR(20) PRIMARY KEY,
+    FirstName VARCHAR(20),
+    LastName VARCHAR(20),
+    HoursEnrolled INT,
+    GPA FLOAT,
+    Major VARCHAR(20),
+    DOG DATE
+);
+
+# Create a table Faculty with the following fields (15 points).
+CREATE TABLE Faculty (
+    FacultyID VARCHAR(20) PRIMARY KEY,
+    FirstName VARCHAR(20),
+    LastName VARCHAR(20),
+    Department VARCHAR(20),
+    yearsEmployed INT
+);
+
+# Create a table Course with the following fields (15 points).
+CREATE TABLE Course (
+    CourseID VARCHAR(20) PRIMARY KEY,
+    CourseName VARCHAR(20),
+    TaughtBy VARCHAR(20),
+    year INT,
+    NoEnrolled INT,
+    FOREIGN KEY (TaughtBy) REFERENCES faculty(FacultyID)
+);
+
+# Insert the following tuple into Faculty:  (an17d, Amit Kumar, Nath, Computer Science, 5)  (10 points).
+INSERT INTO Faculty 
+VALUES ('an17d', 'Amit Kumar', 'Nath', 'Computer Science', '5')
+
+#Insert the following tuple into Course:  (cgs3066, Web Programming and Design, an17d, 2022, 40) (10 points).
+INSERT INTO Course 
+VALUES ('cgs3066', 'Web Programming and Design', 'an17d', '2022', '40')
+
+# Add a column to the Course table, called Term, which is a string of at most 10 characters (10 points).
+ALTER TABLE Course
+ADD COLUMN Term VARCHAR(10)
+
+# Find all the students whose GPA is greater than 3.0 and display them in descending order by StudentID (10 points).
+SELECT * FROM Students
+WHERE GPA > 3.0
+ORDER BY StudentID DESC;
+
+# Find all the courses that are being taught by faculty in the Chemistry department (15 points).
+SELECT * FROM Course
+INNER JOIN faculty
+WHERE TaughtBy = faculty.FacultyID AND faculty.Department = 'Chemistry';
+
+# Find the number of students whose major is Math and have been enrolled in less than 60 hours (10 points).
+SELECT COUNT(StudentID) FROM Students
+WHERE Major = 'Math' AND HoursEnrolled < 60;
+
+# Find all the students whose expected date of graduation is after December 9th 2022 (10 points).
+SELECT * FROM Students
+WHERE DOG > '2022-12-09';
+
+# Find the average GPA of students whose major is Physics (10 points).
+SELECT AVG(GPA) FROM Students
+WHERE Major = 'Physics';
+
+# Find all the faculty in the Anthropology or Archeology departments who have been employed for at least 15 years (15 points).
+SELECT * FROM Faculty
+WHERE (Department = 'Anthropology' AND yearsEmployed >= 15) OR (Department = 'Archeology' AND yearsEmployed >= 15);
+
+# Find all the majors where the average GPA is greater than 2.75 and display them in ascending order (10 points).
+SELECT Major, AVG(GPA) FROM Students
+Group BY Major
+HAVING AVG(GPA) < 2.75
+ORDER by Major ASC;
+
+# Find  all  the  faculty  who  teach  courses with  more  than  100 students  and display  them  in ascending order of last name and then first name (15 points).
+SELECT LastName, FirstName FROM Faculty
+INNER JOIN Course
+Group BY Lastname
+HAVING course.NoEnrolled > 100
+ORDER by Lastname ASC;
+
+# Delete all students who have been enrolled in more than 150 hours (10 points).
+DELETE FROM Students WHERE HoursEnrolled > 150;
+
+# Delete the table Course (15 points).
+DROP TABLE Course;
