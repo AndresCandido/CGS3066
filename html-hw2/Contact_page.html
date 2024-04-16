@@ -1,0 +1,80 @@
+<!--                CGS-3066 , Assignment 2.       By: Andres Candido               -->
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="My_style.css">
+    </head>
+
+    
+    <body>
+        <header>
+            <h1>Andres Candido</h1>
+
+            <ul>
+
+                <li><a href="Contact_page.html">Contact</a></li>
+                <li><a href="Home_page.html #Home_Section4">About Me</a></li>
+                <li><a href="Academics.html">My Academics</a></li>
+                <li><a href="Home_page.html #Home_Section3">Accomplishments</a></li>
+                <li><a class="active" href="Home_page.html">Home</a></li>
+               
+              </ul>
+
+
+        </header>
+
+        <div id="submit_form">
+            <p> <b> contact email:    placeholder@gmail.com</b> </p>
+
+            <h2>Also, let me know about yourself through this webpage!</h2>
+
+            <form action="/action_page.php">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" maxlength="15">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" maxlength="15"><br><br>
+
+                <label> Message: </label> 
+                <textarea name="message" rows="5" cols="100" placeholder="Hello!"> </textarea> <br><br>
+
+                <label> Email: </label> <input type="email" name="email" size="60" required> <br><br>
+
+                <label> Country: </label> 
+                <select>
+                    <option> Choose One </option>
+                    <option> United States </option>
+                    <option> United Kingdom </option>
+                    <option> Russia </option>
+                    <option> France </option>
+                    <option> Canada </option>
+                    <option> China </option>
+                    <option> Other </option>
+                </select>&emsp; 
+
+                <label> Mobile: </label> <input type="tel" name="phone" placeholder="999-999-9999" maxlength="11"><br><br>
+
+                <label> Age: </label> <input type="number" name="age"> <br><br>
+                <label> Gender: </label> 
+                    <input type="radio" name="gender"> Male
+	                <input type="radio" name="gender"> Female <br><br>
+
+                    <input type="checkbox" name="rule1" required> I agree to the Term, Conditions, and Cookie Policy. <br>   
+                    <input type="checkbox" name="rule2"> I agree to the Email/Text and Notification Acceptance Policy. 
+                    <br><br>
+                    <input id="submit" type="submit" name="submit" value="Contact me!">
+
+              </form>
+
+        </div>
+
+
+        <footer>
+            <P>
+                <b> Copyright &copy by Andres Candido </b> <br> All Rights Reserved.
+            </P>
+        </footer>
+
+    </body>
+
+</html>

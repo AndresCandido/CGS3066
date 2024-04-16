@@ -1,0 +1,113 @@
+
+                                                                                                         /* header styling start */
+header {                                             
+    background-color: rgba(0, 0, 0, 0.897);
+    color: white;
+
+    text-align: center;
+}
+
+header h1{
+    text-shadow: 2px 2px rgb(45, 52, 230);
+    float: left;
+    width: 40%;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+header li{
+    display:inline;
+    float: right;
+
+}
+
+header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+}
+
+header li a:hover {
+    background-color: #111;
+}
+                                                                                                         /* header styling end */
+ 
+                                                                                                         /* footer and body (body is shared for all pages) styling start */                                                                                                                            
+footer {
+    background-color: rgba(19, 17, 17, 0.897);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+                                                                                                                               
+body {
+    background-color: rgb(95, 179, 228);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+                                                                                                         /* footer and body styling end */
+
+                                                                                                         /* home-page specific styling start */
+#Home_main{
+    max-width: 1200px;
+    margin: auto;
+    font-size: 20px;
+}
+
+#Home_Section1{
+    height: 600px;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+#Home_Section1 p{
+    margin-left: 30px;
+}
+
+#Home_Section1 embed{
+    float: right;
+    border-bottom: 5px solid rgb(0, 0, 0);
+    border-left: 5px solid rgb(0, 0, 0);
+}
+
+#Home_Section2{
+    text-align: center;
+}
+                                                                                                         /* home-page specific styling end */
+
+                                                                                                         /* Academic-page specific styling start */
+#Academic_info{
+    font-size: 20px;
+}
+
+
+
+                                                                                                         /* Academic-page specific styling end */
+
+                                                                                                         /* Contact-page specific styling start */
+#submit_form{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+#submit {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+   }
+   
+   #submit:hover {
+    background-color: rgb(0, 162, 255);
+   }
+                                                                                                            /* Contact-page specific styling start */
