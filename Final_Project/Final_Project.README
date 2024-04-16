@@ -1,0 +1,29 @@
+                                                            CGS3066 - Web programming and Design 
+                                                                        Final Project
+
+                                                                      By: Andres Candido
+
+
+    Table 3066 is a fictional restaurant, serving as the final project of a FSU web development class, CGS-3066: Web Programming and Design.
+        Table 3066 consists of 3 pages, each containing an interactive navigation menu bar, an image slideshow, and more features.
+                    The Hours page displays whether the restaurant is open or closed based on your device's time.
+                    The Menu page displays our menu, which consists of a mySQL table of food items, prices, and more.
+                        This project is meant to demonstrate our mastery over HTML, CSS, javascript, PHP, and mySQL.
+
+    Since I completed this project by myself, I was responsable for all the HTML, CSS, javascript, PHP, and mySQL portions of the assignment.
+
+
+Important note: For the php files on the project to work, the "Final_Project" folder should be placed inside XAMPP'S htdocs folder. 
+                Login info in "db_connect.php" should be updated if necessary. And a "Table_3066" database and "Menu" table should be created (if necessary) using the code bellow:
+
+
+CREATE DATABASE Table_3066;
+
+CREATE TABLE Menu (
+    ItemID int NOT NULL AUTO_INCREMENT,
+    Type VARCHAR(20),
+    Name VARCHAR(50),
+    Description VARCHAR(500),
+    Price float NOT NULL,
+    PRIMARY KEY (ItemID)
+);

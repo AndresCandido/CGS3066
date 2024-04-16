@@ -1,0 +1,146 @@
+/* -----------------  Final Project - Andres Candido  ---------------------------- */
+                                                                                                         /* header styling start */
+header {                                             
+    background-color: rgb(0, 0, 0);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    font-family: 'Segoe Script', cursive;
+    text-align: center;
+}
+
+header h1{
+    text-shadow: 2px 2px rgb(255, 8, 0, 0.747);
+    float: left;
+    width: 40%;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+
+header li{
+    display:inline;
+    float: right;
+
+}
+
+header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+}
+
+.active:hover {
+    color: #000000;
+}
+
+header li a:hover {
+    color: rgba(255, 8, 0, 0.747);
+}
+                                                                                                         /* header styling end */
+ 
+                                                                                                         /* footer and body (body is shared for all pages) styling start */                                                                                                                            
+footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Segoe Script', cursive;
+    font-size: 15px;
+    text-align: center;
+}
+                                                                                                                               
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Segoe Script', cursive;
+  }
+                                                                                                         /* footer and body styling end */
+
+                                                                                                         /* Slide-show styling start */   
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots are only for counting slides in js, they don't actually display on page (change display value to "inline-block" to see them if needed, "none" to hide them) */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #b11313;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+                                                                                                         /* Slide-show styling end */  
+
+                                                                                                         /* Sticky div styling start */
+
+.sticky {
+  position: sticky;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  width: 500px;
+  margin: auto;
+}
+
+h2 {
+    border-style: ridge;
+    color: white;
+    text-align: center; 
+}
+
+                                                                                                         /* Sticky div styling start */
+
+                                                                                                          /* Content styling start */
+                                                                                                         
+.content{
+    border-style: ridge;
+    margin: auto;
+    width: 80%;
+    text-align: center; 
+}
+
+.column {               /* .column and .row:after are for the Hours_page content only*/
+    float: left;
+    width: 50%;
+} 
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+                                                                                                         /* Content styling end */
