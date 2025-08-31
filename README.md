@@ -8,7 +8,7 @@ CGS3066 is a web programming and design course at Florida State University. The 
 - PHP for server-side development
 - MySQL for database integration
 
-  ## Final Project: Table 3066
+## Final Project: Table 3066
 
 The final project for CGS3066 is **Table 3066**, a fictional restaurant website designed to showcase full-stack web development skills taught in the course.
 
